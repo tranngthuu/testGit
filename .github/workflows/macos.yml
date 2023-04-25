@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches: [ dev ]
 
 env:
   BUILD_TYPE: Release
@@ -34,7 +34,7 @@ jobs:
         cd googletest
         cmake -Bbuild -DCMAKE_INSTALL_PREFIX=$GITHUB_WORKSPACE/$INSTALL_LOCATION
         cmake --build build --config Release
-        cd ../CppProject
+        cd ../testGit
 
 
     - name: configure
